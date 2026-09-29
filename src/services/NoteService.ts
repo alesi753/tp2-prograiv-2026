@@ -25,7 +25,14 @@ export class NoteServiceImpl implements NoteService {
     // es true, además deben llamar a notify(nota) del módulo
     // notificationService. En el test, simulen ese módulo completo con
     // vi.mock y verifiquen la llamada con toHaveBeenCalledWith.
-    return this.repo.create(data);
+    const note = this.repo.create(data);
+
+    if (data.pinned) {
+      notify(note);
+    }
+
+    return note;
+    
   }
 
   listNotes(): Note[] {
@@ -48,6 +55,6 @@ export class NoteServiceImpl implements NoteService {
 
   deleteNote(id: number): boolean {
     // 🔴🟢 EJERCICIO 5: ciclo completo.
-    return this.repo.delete(id);
+    return this.repo.delete(id)
   }
 }
