@@ -21,6 +21,6 @@ describe('NoteService - getNote (Ejercicio 3)', () => {
   });
 
   it('devuelve undefined si el id no existe', () => {
-    expect(service.getNote(9999)).toBeUndefined();
+    expect(service.getNote(2923)).toBeUndefined();
   });
 });

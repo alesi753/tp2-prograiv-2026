@@ -55,6 +55,6 @@ export class NoteServiceImpl implements NoteService {
 
   deleteNote(id: number): boolean {
     // 🔴🟢 EJERCICIO 5: ciclo completo.
-    return this.repo.delete(id)
+    return this.repo.delete(id);
   }
 }

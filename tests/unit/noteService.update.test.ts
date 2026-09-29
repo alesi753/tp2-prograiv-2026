@@ -34,7 +34,7 @@ describe('NoteService - updateNote (Ejercicio 4)', () => {
   });
 
   it('retorna undefined al intentar actualizar un ID que no existe', () => {
-    const result = service.updateNote(9999, { title: 'Fallo forzado' });
+    const result = service.updateNote(2389, { title: 'Fallo forzado' });
     expect(result).toBeUndefined();
   });
 });

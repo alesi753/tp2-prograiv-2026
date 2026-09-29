@@ -23,7 +23,7 @@ describe('NoteService - deleteNote (Ejercicio 5)', () => {
   });
 
   it('retorna false al intentar eliminar un ID que no existe', () => {
-    const result = service.deleteNote(9999);
+    const result = service.deleteNote(3248);
 
     expect(result).toBe(false);
   });
